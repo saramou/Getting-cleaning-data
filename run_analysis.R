@@ -68,7 +68,7 @@ run_analysis<-function()
   tidyAll<-ddply(all,.(Subject,Activity),function(x) colMeans(x[,3:length(names(x))]))
   
   #Data output
-  write.table(tidyAll,"tidyAll.txt")
+  write.table(tidyAll,"tidyAll.txt",row.names=FALSE)
   
   tidyAll
   
